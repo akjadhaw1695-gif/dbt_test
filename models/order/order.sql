@@ -1,3 +1,5 @@
+{{ config(materialized='view') }}
+
 with source_data as (
     select *
     from workspace.spark.sparkschema
