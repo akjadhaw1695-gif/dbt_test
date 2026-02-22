@@ -36,6 +36,9 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   my_new_project:
+    +catalog: dbt_uses          # 👈 yaha apna Unity Catalog name daalo
+    +schema: dbt_schema       # 👈 jo schema create karna hai
+    +materialized: table
     # Applies to all files under models/example/
     example:
       +materialized: table
